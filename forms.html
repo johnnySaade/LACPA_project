@@ -14,38 +14,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="container nav-container">
+    <div class="container nav-container">
+        <div class="logo">
+            <div class="logo-box">M</div>
+            <div>
+                <h3>Mutual LACPA Members</h3>
+                <span>الصندوق التعاضدي</span>
+            </div>
+        </div>
 
-    <div class="logo">
-      <div class="logo-box">M</div>
-      <div>
-        <h3>Mutual LACPA Members</h3>
-        <span>الصندوق التعاضدي</span>
-      </div>
+        <nav>
+            <a class="active" href="#">الرئيسية</a>
+            <a href="forms.html">النماذج</a>
+            <a href="cost-list.html">قائمة التكلفة</a>
+            <a href="annual.html">الاشتراك السنوي</a>
+        </nav>
     </div>
-
-    <!-- Hamburger button (shows only on mobile) -->
-    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">
-      ☰
-    </button>
-
-    <!-- Desktop links -->
-    <nav class="nav-links" aria-label="القائمة الرئيسية">
-      <a class="active" href="index.html">الرئيسية</a>
-      <a href="forms.html">النماذج</a>
-      <a href="cost-list.html">قائمة التكلفة</a>
-      <a href="annual.html">الاشتراك السنوي</a>
-    </nav>
-
-  </div>
-
-  <!-- Mobile dropdown -->
-  <nav class="mobile-menu" id="mobileMenu" aria-label="القائمة للموبايل">
-    <a class="active" href="index.html">الرئيسية</a>
-    <a href="forms.html">النماذج</a>
-    <a href="cost-list.html">قائمة التكلفة</a>
-    <a href="annual.html">الاشتراك السنوي</a>
-  </nav>
 </header>
 
 <!-- PAGE HEADER -->
@@ -120,26 +104,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     </div>
   </div>
 </footer>
-
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn?.addEventListener("click", () => {
-    const isOpen = mobileMenu.style.display === "block";
-    mobileMenu.style.display = isOpen ? "none" : "block";
-    menuBtn.setAttribute("aria-expanded", (!isOpen).toString());
-  });
-
-  // Optional: close menu when clicking any link
-  mobileMenu?.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      mobileMenu.style.display = "none";
-      menuBtn.setAttribute("aria-expanded", "false");
-    });
-  });
-</script>
   
 </body>
 
 </html>
+
